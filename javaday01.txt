@@ -1,0 +1,227 @@
+Java-basic-Assignments : 
+
+1.Declare three number variables with value as 12,25,89 find the greatest number and display. 
+
+package com.sonata;
+
+public class GreatestNumber {
+
+	public static void main(String[] args) {
+	// TODO Auto-generated method stub	
+int a=12;
+int b=25;
+int c=89;
+if(a>b && a>c) {
+	System.out.println(a+ " is greatestnumber");
+}
+else if(b>a && b>c) {
+	System.out.println(b+ " is greatestnumber");
+}
+else
+{
+	System.out.println(c+ " is greatestnumber");
+}
+	}
+
+}
+
+2.Write a program in java to display the first 10 natural numbers. Expected output is 1 to 10 numbers 
+
+package com.sonata;
+
+public class NaturalNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int i;
+System.out.println("The first 10 natural numbers are");
+for(i=1;i<=10;i++)
+{
+	System.out.println(i);	
+}
+	}
+
+}
+
+3.Write a java program to display the cube of the given number for ex: if given number is 2 then cube of it is 8 
+
+package com.sonata;
+
+public class NumberCube {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int i=2,cube;
+cube =i*i*i;
+System.out.println("cube value of given number is " +cube);
+	}
+
+}
+
+4.Write a java program to sum values of an array. For example a[5] ={1,2,3,4,5,6} the sum of the values is 21. 
+
+package com.sonata4;
+
+public class SumOfArray {
+	
+		public static void main(String[] args) {
+			int a[]= {1,2,3,4,5,6};
+			int sum=0;
+			for(int i=0;i<a.length;i++)
+			{
+		        sum=sum+a[i];
+			}
+			System.out.println(sum);
+		}
+
+	}
+
+5.Write a java program to test if an array contains a specific value
+
+package com.sonata;
+
+public class SpecificValue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int num[]= {1,2,3,4,5,6};
+int value=4;
+for(int i=0;i<num.length;i++)
+{
+	if(num[i]== value)
+	{
+		System.out.println("value is exist");
+	}
+	
+}
+	}
+
+}
+
+
+6.Write a java program to reverse an array of integer values. 
+
+package com.sonata5;
+
+public class ReverseArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[]= {1,2,3,4,5};
+		
+		
+			System.out.println("reverse array");
+		for(int i=a.length-1;i>=0;i--)
+		{
+			System.out.println(a[i]);
+				}
+	}
+
+}
+
+
+7.Read the String and replace Ovals with dollar symbol program 
+
+package com.sonata5;
+import java.util.Scanner;
+public class Replace {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("enter the string"); 
+		Scanner sc=new Scanner(System.in);
+		String st=sc.nextLine();
+		char ch[]=st.toCharArray();
+		for(int i=0;i<ch.length;i++)
+		{
+			if(ch[i]=='a'|| ch[i]=='e'||ch[i]=='i'||ch[i]=='o'||ch[i]=='u')
+			{
+				ch[i]='$';
+			}
+		}
+		for(int i=0;i<ch.length;i++)
+		{
+			System.out.println(ch[i]);
+		
+		}
+	}
+
+}
+
+
+8.Write a program to identify duplicate values in an array
+
+package com.sonata5;
+
+public class DuplicateValues {
+	public static void main(String[] args) {
+	int a[]= {1,7,2,1,4,7,5};
+	System.out.println("duplicate values");
+	for(int i=0;i<a.length;i++) {
+		for(int j=i+1;j<a.length;j++) 
+		{
+		if(a[i]==a[j])
+			System.out.println(a[j]);
+		}
+            
+	}
+		
+	}
+}
+
+
+9.Read the highest count of duplicates from array of integers 
+
+package com.sonata5;
+
+public class HighestCount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int count=0;
+		int a[]= {1,2,3,3,3,4,5,7,8,5};
+		for(int i=0;i<a.length;i++)
+		{
+		for(int j=i+1;j<a.length;j++)
+		{
+		if(a[i]==a[j])
+		{
+		count++;
+		break;
+		}
+
+		}
+		}
+		System.out.println("The highest count of Duplicate number"+count);
+	}
+
+}
+
+
+10.Write a program to identify 2 large numbers in an array. 
+
+package com.sonata5;
+
+public class LargestTwo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= {1,34,52,7,89,35};
+int first=0,second=0;
+for(int i=0;i<a.length;i++) {
+	if(first<a[i])
+	{
+		second=first;
+		first=a[i];
+	}
+	else if(second<a[i])
+	{
+		second=a[i];
+	}
+}
+System.out.println("first 2 largest numbers  " +first+" " +second);
+	}
+
+}
+
+
